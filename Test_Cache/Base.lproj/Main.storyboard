@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="22505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22504"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Test_Cache" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cYO-GY-oih">
+                                <rect key="frame" x="20" y="405" width="353" height="42"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal" title="고양이 보여줘"/>
+                                <connections>
+                                    <segue destination="R1I-il-mjo" kind="presentation" id="AMj-bz-iBW"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="cYO-GY-oih" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="35U-KR-qb7"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="cYO-GY-oih" secondAttribute="trailing" constant="20" id="HAm-0H-1GG"/>
+                            <constraint firstItem="cYO-GY-oih" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="f0D-La-Rll"/>
+                            <constraint firstItem="cYO-GY-oih" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="hem-eo-sMO"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="140" y="-2"/>
+        </scene>
+        <!--Modal View Controller-->
+        <scene sceneID="E8L-j5-tfn">
+            <objects>
+                <viewController id="R1I-il-mjo" customClass="ModalViewController" customModule="Test_Cache" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="1sI-zq-nEc">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="842"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="photo" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="4ge-JT-hAx">
+                                <rect key="frame" x="20" y="118.66666666666663" width="353" height="350"/>
+                                <color key="tintColor" name="AccentColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="4ge-JT-hAx" secondAttribute="height" multiplier="1:1" id="08b-8X-iAz"/>
+                                </constraints>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="N1X-dG-ma8">
+                                <rect key="frame" x="16" y="528" width="353" height="35"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal" title="고양이 가져오기"/>
+                                <connections>
+                                    <action selector="bringCatButtonTapped:" destination="R1I-il-mjo" eventType="touchUpInside" id="nIm-UY-Kuh"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="7dK-Hz-XYd"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="7dK-Hz-XYd" firstAttribute="trailing" secondItem="4ge-JT-hAx" secondAttribute="trailing" constant="20" id="T9x-8S-p1e"/>
+                            <constraint firstItem="N1X-dG-ma8" firstAttribute="top" secondItem="4ge-JT-hAx" secondAttribute="bottom" constant="58" id="TRv-ZS-Nyl"/>
+                            <constraint firstItem="4ge-JT-hAx" firstAttribute="centerX" secondItem="1sI-zq-nEc" secondAttribute="centerX" id="YA9-Zt-AEi"/>
+                            <constraint firstItem="7dK-Hz-XYd" firstAttribute="trailing" secondItem="N1X-dG-ma8" secondAttribute="trailing" constant="20" id="f5m-0V-C55"/>
+                            <constraint firstItem="N1X-dG-ma8" firstAttribute="leading" secondItem="7dK-Hz-XYd" secondAttribute="leading" constant="20" id="iJJ-XW-WHm"/>
+                            <constraint firstItem="4ge-JT-hAx" firstAttribute="leading" secondItem="7dK-Hz-XYd" secondAttribute="leading" constant="20" id="nuR-l8-HMu"/>
+                            <constraint firstItem="4ge-JT-hAx" firstAttribute="top" secondItem="7dK-Hz-XYd" secondAttribute="top" constant="117" id="qhD-Ew-VFZ"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="catImageView" destination="4ge-JT-hAx" id="yad-HK-onN"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dqb-Si-88R" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1127" y="0.0"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="photo" catalog="system" width="128" height="93"/>
+        <namedColor name="AccentColor">
+            <color red="0.0" green="0.46000000000000002" blue="0.89000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
